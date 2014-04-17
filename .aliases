@@ -11,6 +11,8 @@ alias vi='vim'
 # Directories
 alias c='cd ..'
 alias dev='cd ~/dev/'
+alias bi='vim'
+alias bim='vim'
 
 # Files
 alias editbash='vim ~/.bashrc'

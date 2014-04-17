@@ -17,3 +17,7 @@ set showmatch
 " :W sudo saves file
 command W w !sudo tee % > /dev/null
 
+" Solarized Dark
+set background=dark
+let g:solarized_termtrans = 1
+colorscheme solarized

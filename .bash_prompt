@@ -1,5 +1,7 @@
 # Load in the git branch prompt script.
 source ~/.git-prompt.sh
+source ~/.git-completion.bash
+source ~/.maven-completion.bash
 
 # Display
 export GIT_PS1_SHOWDIRTYSTATE=true
