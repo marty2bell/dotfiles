@@ -1,17 +1,16 @@
-#ln -sf .git-prompt.sh ~/
+#!/bin/bash
 
-declare -a arr=(".aliases" ".bash_prompt" ".gitconfig" ".bash_profile" ".commonrc" ".git-prompt.sh")
 dest_dir=~
 cwd=$(pwd)
 
 echo $cwd
 
-pushd $dest_dir > /dev/null 2>&1
+files=$(ls -ld .??* | grep ^- | awk '{print $9}')
 
-for i in "${arr[@]}"
+for i in $files
 do
-   echo "linking $dest_dir/$i to $cwd/$i"
-   ln -sf $cwd/$i $i
+  echo "linking $cwd/$i to $dest_dir/$i"
+  ln -sf $cwd/$1 $dest_dir/$i
 done
 
-popd > /dev/null 2>&1
+exit 0
