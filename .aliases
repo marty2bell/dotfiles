@@ -21,3 +21,6 @@ alias editprof='vim ~/.bash_profile'
 alias hosts='sudo vim /etc/hosts'
 alias vimrc='vim ~/.vimrc'
 alias f5='. ~/.bash_aliases'
+
+alias chromecors="sudo /opt/boxen/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security"
+alias https="http --verify=no"

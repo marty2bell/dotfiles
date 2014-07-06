@@ -3,6 +3,7 @@
   email = adrian.hannigan@bitnet.io
 [core]
   excludesfile = /opt/boxen/config/git/gitignore
+	ignorecase = false
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path = 
