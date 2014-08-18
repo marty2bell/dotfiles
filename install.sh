@@ -1,16 +1,17 @@
 #!/bin/bash
 
+declare -a arr=(".aliases" ".bash_profile" ".bash_prompt" ".commonrc" ".git-completion.bash" ".git-prompt.sh" ".gitconfig" ".maven-completion.bash" ".tmux.conf" ".vimrc")
 dest_dir=~
 cwd=$(pwd)
 
 echo $cwd
 
-files=$(ls -ld .??* | grep ^- | awk '{print $9}')
+pushd $dest_dir > /dev/null 2>&1
 
-for i in $files
+for i in "${arr[@]}"
 do
-  echo "linking $cwd/$i to $dest_dir/$i"
-  ln -sf $cwd/$1 $dest_dir/$i
+  echo "linking $dest_dir/$i to $cwd/$i"
+  ln -sf $cwd/$i $i
 done
 
-exit 0
+popd > /dev/null 2>&1
