@@ -8,4 +8,7 @@ export LANG=en_US.UTF-8
 # Misc settings
 export EDITOR=vim
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
+# Set java to latest installed version
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+
